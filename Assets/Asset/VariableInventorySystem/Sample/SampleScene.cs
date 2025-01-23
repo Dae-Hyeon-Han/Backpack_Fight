@@ -40,7 +40,7 @@ public class SampleScene : MonoBehaviour
         {
             var item = new ItemCellData(i % 6);
             stashData.InsertInventoryItem(stashData.GetInsertableId(item).Value, item);
-            standardStashView.Apply(stashData);
+           standardStashView.Apply(stashData);
 
             yield return null;
         }

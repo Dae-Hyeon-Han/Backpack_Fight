@@ -95,7 +95,7 @@ namespace VariableInventorySystem
                 return;
             }
 
-            Apply(StashData);
+            //Apply(StashData);
             StashData.IsDirty = false;
         }
 
