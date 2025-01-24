@@ -15,6 +15,12 @@ namespace VariableInventorySystem
 
         protected List<IStandardCaseCellData> popupList = new List<IStandardCaseCellData>();
 
+        private void Start()
+        {
+            // 외않데?
+            //var standardCaseViewPopup = Instantiate(casePopupPrefab, caseParent).GetComponent<StandardCaseViewPopup>();
+        }
+
         protected override void OnCellClick(IVariableInventoryCell cell)
         {
             if (cell.CellData is IStandardCaseCellData caseData)
@@ -23,6 +29,8 @@ namespace VariableInventorySystem
                 {
                     return;
                 }
+
+                //Debug.Log("Chest 열기");
 
                 popupList.Add(caseData);
 

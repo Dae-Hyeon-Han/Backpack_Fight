@@ -56,10 +56,12 @@ namespace VariableInventorySystem
 #else
             if (eventData.button == PointerEventData.InputButton.Left)
             {
+                //Debug.Log("아이템 클릭");
                 onPointerClick?.Invoke();
             }
             else
             {
+                //Debug.Log("아이템 클릭");
                 onPointerOptionClick?.Invoke();
             }
 #endif

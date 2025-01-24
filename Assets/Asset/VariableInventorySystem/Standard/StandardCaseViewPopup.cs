@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace VariableInventorySystem
 {
+    // 인벤토리 속 상자 오픈
     public class StandardCaseViewPopup : MonoBehaviour
     {
         [SerializeField] StandardCaseView standardCaseView;
