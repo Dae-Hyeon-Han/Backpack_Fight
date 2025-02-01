@@ -114,8 +114,8 @@ namespace VariableInventorySystem
             {
                 transform = transform.parent;
 
-                if(i==3)
-                    Debug.Log($"이름: {transform.name}");
+                //if(i==3)
+                    //Debug.Log($"이름: {transform.name}");
             }
 
             return true;

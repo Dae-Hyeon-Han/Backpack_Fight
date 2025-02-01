@@ -20,9 +20,9 @@ namespace VariableInventorySystem
 
         public virtual void Initialize()
         {
-            effectCell = Instantiate(CellPrefab, EffectCellParent).GetComponent<IVariableInventoryCell>();
-            effectCell.RectTransform.gameObject.SetActive(false);
-            effectCell.SetSelectable(false);
+            effectCell = Instantiate(CellPrefab, EffectCellParent).GetComponent<IVariableInventoryCell>();          // 아이템 오브젝트 생성
+            effectCell.RectTransform.gameObject.SetActive(false);                                                   // ???
+            effectCell.SetSelectable(false);                                                                        // 이거 없으면 드래그 & 드롭 막힘
         }
 
         public virtual void AddInventoryView(IVariableInventoryView variableInventoryView)
@@ -36,6 +36,7 @@ namespace VariableInventorySystem
             InventoryViews.Remove(variableInventoryView);
         }
 
+        // 드래그 시작
         public virtual void OnBeginDrag(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left)
@@ -60,6 +61,7 @@ namespace VariableInventorySystem
             effectCell.Apply(stareData);
         }
 
+        // 드래그 중
         public virtual void OnDrag(PointerEventData eventData)
         {
             if (effectCell?.CellData == null)
@@ -85,6 +87,7 @@ namespace VariableInventorySystem
             return (cell.IsRotate ? cell.Height : cell.Width, cell.IsRotate ? cell.Width : cell.Height);
         }
 
+        // 드래그 완료
         public virtual void OnEndDrag(PointerEventData eventData)
         {
             if (effectCell.CellData == null)

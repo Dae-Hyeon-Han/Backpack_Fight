@@ -5,9 +5,9 @@ using VariableInventorySystem.Sample;
 
 public class SampleScene : MonoBehaviour
 {
-    [SerializeField] StandardCore standardCore;
-    [SerializeField] StandardStashView standardStashView;
-    [SerializeField] UnityEngine.UI.Button rotateButton;
+    [SerializeField] StandardCore standardCore;                         // 컨트롤 등 핵심 기능
+    [SerializeField] StandardStashView standardStashView;               // 실제 보여지고 상호작용 할 오브젝트
+    [SerializeField] UnityEngine.UI.Button rotateButton;                // 무엇을 위한 버튼인지?
 
     void Awake()
     {
